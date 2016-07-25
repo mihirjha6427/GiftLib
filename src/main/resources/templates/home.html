@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"/>
+<link rel="stylesheet" th:href="@{/app.css}"/>
+<title>home</title>
+</head>
+<body>
+<h1> Home</h1>
+<p>Hello welcome to the Gift shopping cart </p>
+<div th:each= "category: ${categories}">
+<a th:href="@{'/category/' + ${category.id}}">
+<img th:src="@{'/img/'+${category.name}+'.jpg'}" alt="logo"/>
+</a>
+</div>
+
+</body>
+</html>

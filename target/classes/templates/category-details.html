@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"/>
+<link rel="stylesheet" th:href="@{/app.css}"/>
+<title>Category-details</title>
+</head>
+<body>
+<h1> Category details</h1>
+<p>Hello welcome to the Gift shopping cart </p>
+
+
+<div th:each= "product: ${products}">
+
+<img th:src="@{'/img/'+${product.name}+'.jpg'}" alt="logo"/>
+</div>
+
+
+
+</body>
+</html>
