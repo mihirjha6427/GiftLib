@@ -1,9 +1,13 @@
 package com.niit.giftlib.model;
 
+import javax.persistence.ManyToOne;
+
 public class Product {
 	private int CategoryId;
 	private String name;
 	private String description;
+	@ManyToOne
+	private Category category;
 	
 	
 	

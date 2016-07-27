@@ -3,16 +3,22 @@
 <head>
 <meta charset="ISO-8859-1"/>
 <link rel="stylesheet" th:href="@{/app.css}"/>
+<link rel="stylesheet" th:href= "@{/bootstrap/css/bootstrap.min.css}"/>
 <title>Category-details</title>
 </head>
 <body>
-<h1> Category details</h1>
-<p>Hello welcome to the Gift shopping cart </p>
 
+      
+
+<div class="container">
+<div class="row">
 
 <div th:each= "product: ${products}">
-
+<div class="col-xs-4">
 <img th:src="@{'/img/'+${product.name}+'.jpg'}" alt="logo"/>
+</div>
+</div>
+</div>
 </div>
 
 

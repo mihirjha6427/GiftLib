@@ -1,11 +1,22 @@
 package com.niit.giftlib.model;
 
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+
+import org.springframework.stereotype.Component;
+
+@Entity
+@Component("category")
 public class Category {
+	@Id
 	private int id;
 	private String name;
 	
 	
 	
+    public Category(){}	
 	
 	
 	public Category(int id, String name) {
@@ -25,7 +36,6 @@ public class Category {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
 	
 	
 	

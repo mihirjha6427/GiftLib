@@ -1,7 +1,13 @@
-C:\Users\Mihir\workspace\GiftLib\src\main\java\com\niit\giftlib\repository\CategoryRepository.java
 C:\Users\Mihir\workspace\GiftLib\src\main\java\com\niit\giftlib\repository\ProductRepository.java
-C:\Users\Mihir\workspace\GiftLib\src\main\java\com\niit\giftlib\AppConfig.java
-C:\Users\Mihir\workspace\GiftLib\src\main\java\com\niit\giftlib\controller\CategoryController.java
 C:\Users\Mihir\workspace\GiftLib\src\main\java\com\niit\giftlib\controller\ProductController.java
 C:\Users\Mihir\workspace\GiftLib\src\main\java\com\niit\giftlib\model\Category.java
+C:\Users\Mihir\workspace\GiftLib\src\main\java\com\niit\giftlib\model\User.java
+C:\Users\Mihir\workspace\GiftLib\src\main\java\com\niit\giftlib\Dao\CategoryDao.java
+C:\Users\Mihir\workspace\GiftLib\src\main\java\com\niit\giftlib\model\Role.java
+C:\Users\Mihir\workspace\GiftLib\src\main\java\com\niit\giftlib\repository\CategoryRepository.java
+C:\Users\Mihir\workspace\GiftLib\src\main\java\com\niit\giftlib\AppConfig.java
+C:\Users\Mihir\workspace\GiftLib\src\main\java\com\niit\giftlib\controller\CategoryController.java
+C:\Users\Mihir\workspace\GiftLib\src\main\java\com\niit\giftlib\Dao\CategoryDaoImpl.java
+C:\Users\Mihir\workspace\GiftLib\src\main\java\com\niit\giftlib\DataConfig.java
 C:\Users\Mihir\workspace\GiftLib\src\main\java\com\niit\giftlib\model\Product.java
+C:\Users\Mihir\workspace\GiftLib\src\main\java\com\niit\giftlib\TemplateConfig.java
