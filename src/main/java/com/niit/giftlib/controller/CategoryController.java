@@ -9,10 +9,9 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-
-
-
+import com.niit.giftlib.FlashMessage;
 import com.niit.giftlib.Dao.CategoryDao;
 import com.niit.giftlib.Dao.ProductDao;
 import com.niit.giftlib.model.Category;
@@ -33,6 +32,10 @@ public class CategoryController {
 	@RequestMapping("/")
 	public String home(){
 		return "cart";
+	}
+	@RequestMapping("/login")
+	public String login(){
+		return "login";
 	}
 	
 	@RequestMapping("/product")
@@ -69,8 +72,10 @@ public class CategoryController {
     	  return "add-Product";
       }
       @RequestMapping(value="/category/addProduct", method= RequestMethod.POST)
-      public String addProducts(Product product){
+      public String addProducts(Product product,RedirectAttributes redirectAttributes){
     	  productDao.save(product);
+    	  redirectAttributes.addFlashAttribute("flash",new FlashMessage("Category successfully added!", FlashMessage.Status.SUCCESS));
+
     	  return "redirect:/product";
     	  
       }
@@ -84,11 +89,12 @@ public class CategoryController {
     	  
       }
       @RequestMapping(value="/delete/{id}", method=RequestMethod.POST)
-      public String Delete(@PathVariable int id){
+      public String Delete(@PathVariable int id, RedirectAttributes redirectAttributes){
     	 Category category =categoryDao.findById(id);
     	 categoryDao.delete(category);
     	
-    	 
+    	 redirectAttributes.addFlashAttribute("flash",new FlashMessage("Category successfully DELETED!", FlashMessage.Status.SUCCESS));
+
     	  
     	  return "redirect:/product";
     	  

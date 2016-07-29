@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Login</title>
+<meta charset="utf-8"/>  
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>  
+<link rel="stylesheet" th:href= "@{/bootstrap/css/bootstrap.min.css}"/>
+<link rel="stylesheet" type="text/css" th:href="@{css/login.css}"/>
+
+</head>
+<body>
+<ul class="nav nav-pills">
+<li class="active"><a href="../home/hometraveller'sescape.html">Home</a></li>  
+    <li><a href="../about/abouttraveller'sescape.html">about</a></li>  
+    <li><a href="../bestdeal/bestdealtraveller'sescape.html">best deal</a></li>  
+    <li><a href="#">sign up</a></li>  
+  </ul>  
+
+<div class="header">
+
+<h1> Welcome to login page</h1>
+</div>
+
+<div class="section">
+<div class="cont">
+<img th:src="@{img/img1.jpg}"/>
+
+<form>
+<label for="email">Email id</label>
+<input type="email" name="email" id="email" placeholder="Enter Email Id"/>
+</form>
+
+<form>
+<label for="password">Password</label>
+<input type="password" name="password" id="password" placeholder="Enter Password"/>
+</form>
+<form>
+<input type="button" value="Submit" onclick="printvalue()"/>
+</form>
+
+</div>
+
+
+</div>
+</body>
+</html>
+  
+
+  	
