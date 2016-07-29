@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<title>Add Category</title>
+</head>
+<body>
+<h1> Add category</h1>
+<form id="add" th:action="@{/category/addProduct}" method="post" >
+<input type="text" placeholder="Enter Id"  name="id"/> <br/>
+<input type="text" placeholder="Enter Category Id"  name="CategoryId"/> <br/>
+<input type="text" placeholder="Enter name"  name="name"/> <br/>
+<input type="text" placeholder="Enter description"   name="description"/><br/>
+<button type="submit"  class= "button">Add</button>
+
+</form>
+</body>
+</html>

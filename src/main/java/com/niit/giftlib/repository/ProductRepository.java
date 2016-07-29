@@ -11,17 +11,17 @@ import com.niit.giftlib.model.Product;
 @Component
 public class ProductRepository {
 	private static final List<Product> ALL_PRODUCTS= Arrays.asList(
-			new Product(1,"shopping","women shopping"),
-			new Product(2, "perfume", "women perfume"),
-			new Product(3,"purse","women purse"),
-			new Product(4,"jeans","women-jeans"),
-			new Product(3,"purse-chanel","chanel purse"),
-			new Product(3,"purse-gucci","chanel purse"),
-			new Product(3,"purse-louisVuitton","LouisVuitton purse"),
-			new Product(3,"purse-product","product purse"),
-            new Product(2,"perfume-chloe","perfume"),
-			new Product(2,"perfume-ck","perfume"),
-			new Product(2,"perfume-gucci","perfume"));
+			new Product(1,1,"shopping","women shopping"),
+			new Product(2,2, "perfume", "women perfume"),
+			new Product(3,3,"jeans","women-jeans"),
+			new Product(4,4,"purse","women purse"),
+			new Product(5,4,"purse-chanel","chanel purse"),
+			new Product(6,4,"purse-gucci","chanel purse"),
+			new Product(7,4,"purse-louisVuitton","LouisVuitton purse"),
+			new Product(8,4,"purse-product","product purse"),
+            new Product(9,2,"perfume-chloe","perfume"),
+			new Product(10,2,"perfume-ck","perfume"),
+			new Product(11,2,"perfume-gucci","perfume"));
 	
 	public List<Product> getAllProducts(){
 		return ALL_PRODUCTS;

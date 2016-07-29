@@ -1,20 +1,27 @@
 package com.niit.giftlib.model;
 
-import javax.persistence.ManyToOne;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+
+import org.springframework.stereotype.Component;
+
+@Entity
+@Component("product")
 public class Product {
+	@Id
+	private int id;
 	private int CategoryId;
 	private String name;
 	private String description;
-	@ManyToOne
-	private Category category;
 	
 	
 	
 	
+	public Product(){}
 	
 	
-	public Product(int categoryId, String name, String description) {
+	public Product(int id ,int categoryId, String name, String description) {
 		super();
 		CategoryId = categoryId;
 		this.name = name;
@@ -37,6 +44,16 @@ public class Product {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 	

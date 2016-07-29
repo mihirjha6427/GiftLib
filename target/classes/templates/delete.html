@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1"/>
+<link rel="stylesheet" th:href= "@{/bootstrap/css/bootstrap.min.css}"/>
+<link rel="stylesheet" th:href="@{/css/app.css}"/>
+<title>delete</title>
+<script type="text/javascript">  
+function msg(){  
+ alert("DELETE");  
+}  
+</script>
+</head>
+<body>
+
+
+
+ <div class="jumbotron">   
+<div class="container">
+<div class="row">
+<div th:each= "category: ${categories}">
+
+ <div class="col-xs-4">
+<div class="btn-group" role="group"> 
+
+<a th:href="@{'/delete/' + ${category.id}}">
+<img  th:src="@{'/img/'+${category.name}+'.jpg'}" alt="logo"/>
+<form>
+<input type="button" class="btn btn-default" value="Delete" onclick="msg()"/>
+</form>
+</a>
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>

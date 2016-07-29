@@ -38,14 +38,16 @@ public class CategoryDaoImpl implements CategoryDao {
 	}
 
 	public Category findById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		Session session= sessionFactory.openSession();
+		Category category = (Category) session.get(Category.class, id);
+		session.close();
+		return category;
 	}
 
 	public void save(Category category) {
 	  Session session = sessionFactory.openSession();
 	  session.beginTransaction();
-	  session.save(category);
+	  session.saveOrUpdate(category);
 	  session.getTransaction().commit();
 	  session.close();
 	  
@@ -53,8 +55,14 @@ public class CategoryDaoImpl implements CategoryDao {
 	}
 
 	public void delete(Category category) {
-		// TODO Auto-generated method stub
+		Session session= sessionFactory.openSession();
+		session.beginTransaction();
+		session.delete(category);
+		session.getTransaction().commit();
+		session.close();
+	}
+		
 		
 	}
 
-}
+
